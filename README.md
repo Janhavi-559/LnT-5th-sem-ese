@@ -282,21 +282,5 @@ An exported Postman v2.1 collection is included in:
 
 ---
 
-## 🎯 Viva Preparation & Evaluator Q&A
-
-### Q1: Why did you use MongoDB instead of a Relational Database (like PostgreSQL/MySQL)?
-> **Answer**: University library book catalogs contain semi-structured and evolving metadata (varying editions, dynamic categories, tags, ISBN formats). MongoDB’s flexible BSON document model allows seamless catalog expansion. Furthermore, MongoDB aggregation pipelines allow real-time analytics (such as top borrowed books and inventory health) without costly multi-table SQL joins.
-
-### Q2: How do you prevent race conditions when two members try to borrow the last remaining book copy?
-> **Answer**: In `controllers/transactionController.js`, we verify `availableCopies > 0` before decrementing. In high-concurrency environments, Mongoose atomic operators like `findOneAndUpdate({ _id: bookId, availableCopies: { $gt: 0 } }, { $inc: { availableCopies: -1 } })` ensure atomic decrements without dirty reads.
-
-### Q3: How is password security and authentication managed?
-> **Answer**: Passwords are never stored in plain text. A Mongoose pre-save hook automatically hashes passwords using `bcryptjs` with 10 salt rounds. Protected routes use an Express authentication middleware that verifies signed JWT tokens extracted from the HTTP `Authorization: Bearer <token>` header.
-
-### Q4: How is the hold queue prioritized?
-> **Answer**: Holds are stored with a timestamp (`requestedAt`) and sorted in ascending order (FIFO). When an unavailable book is returned, the system automatically checks for the oldest waiting hold and promotes its status to `AVAILABLE_FOR_PICKUP` with a 3-day pickup expiry window.
-
----
-
 ## 📄 License
 Academic Project developed for **Christ University CIA-3 (Advanced JavaScript Backend Frameworks)**. All rights reserved.
