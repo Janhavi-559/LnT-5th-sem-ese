@@ -8,10 +8,10 @@
 
 | S.No | Student Name | Roll No. | Department | Section |
 |:---:|:---|:---:|:---|:---:|
-| 1 | [Janhavi J] | [2462182] | Computer Science(AIML) | Section C |
-| 2 | [Jemimah Anna Anil] | [2462080] | Computer Science(AIML) | Section C |
-| 3 | [Jewin Jinson] | [2462084] | Computer Science | Section C |
-| 4 | [Issac Limson] | [2462077] | Computer Science(AIML) | Section C |
+| 1 | Janhavi J | 2462182 | Computer Science(AIML) | Section C |
+| 2 | Jemimah Anna Anil | 2462080 | Computer Science(AIML) | Section C |
+| 3 | Jewin Jinson | 2462084 | Computer Science(AIML) | Section C |
+| 4 | Issac Limson | 2462077 | Computer Science(AIML) | Section C |
 
 - **Project Code & Title**: P05 — Digital Library Management System
 - **Domain**: Education
