@@ -16,7 +16,7 @@
 - **Project Code & Title**: P05 — Digital Library Management System
 - **Domain**: Education
 - **Course**: Advanced JavaScript Backend Frameworks (Node.js & Express JS)
-- **GitHub Repository**: [GitHub Repository URL Placeholder]
+- **GitHub Repository**: [https://github.com/Janhavi-559/LnT-5th-sem-ese.git]
 
 ---
 
